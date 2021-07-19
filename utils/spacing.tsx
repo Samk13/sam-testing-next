@@ -1,5 +1,6 @@
+import { SpacerProps } from '../types'
 
-export const Spacer = ({factor=1}) => {
+export const Spacer: React.FC<SpacerProps> = ({factor=1}) => {
     return (
         <span style={{
             margin: `${factor * 8}px`,
