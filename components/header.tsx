@@ -15,7 +15,17 @@ const Header: React.FC = () => {
           <a className={style.Link}>Users list</a>
         </Link>
         <Spacer factor={1} />
-        <Link href="/posts">Posts</Link>
+        <Link href="/posts">
+          <a className={style.Link}>Posts</a>
+        </Link>
+        <Spacer factor={1} />
+        <Link href="/profile">
+          <a className={style.Link}>Profile</a>
+        </Link>
+        <Spacer factor={1} />
+        <Link href="/about">
+          <a className={style.Link}>About</a>
+        </Link>
       </div>
     </header>
   )
