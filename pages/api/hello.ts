@@ -10,10 +10,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  debugger
   if (req.method === 'POST') {
     const reqData = req.body.name.split(' ')
     if (!arrIsNumeric(reqData))
-      res.status(400).json({ errorMessage: 'Please enter a number' })
+      return res.status(400).json({ errorMessage: 'Please enter a number' })
     else
       res.status(200).json({
         name: req.body.name.trim().split(' '),
