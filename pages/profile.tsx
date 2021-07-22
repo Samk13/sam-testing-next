@@ -1,6 +1,5 @@
 import { GetStaticProps } from 'next'
 import React from 'react'
-
 interface ProfileProps {
     response: any
 }
@@ -43,12 +42,16 @@ const Profile: React.FC<ProfileProps> = ({response}) => {
                 <label htmlFor="name">Name</label>
                 <input id="name" type="text" autoComplete="name" required />
                 <button type="submit">Register</button>
+                {errors && errors }
             </form>
             <p>result:</p>
             <ul>
-                errors: {errors ? errors: ""}
             {res.map((item, index) => (<li key={index}>{item}<hr/></li>))}
             </ul>
+            <h2>custom checkbox</h2>
+            <div>
+              <input type="checkbox" />
+            </div>
         </div>
     )
 }
